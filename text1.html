@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEBuse - Секреты юзабилити</title>
+  <link rel="stylesheet" href="text1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="description" content="Узнайте секреты юзабилити и превратите посетителей вашего сайта в фанатов! Практические советы по визуальной иерархии, цветам и навигации.">
+</head>
+<body>
+
+  <header>
+  <div class="container">
+    <div class="logo">
+      <a href="indexVhod.html"><img src="logo.png" alt="Логотип WEBuse"></a>
+    </div>
+    <div class="slogan"><h1>не заставляй меня думать</h1></div>
+    <div class="avatar-nav-wrapper">
+      <a href="registrVh.html" class="login-button">Вход</a>
+      <nav>
+        <ul>
+		    <li><a href="indexVhod.html">главная</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" onclick="toggleDropdown()">статьи</a>
+                <div class="dropdown-content">
+                    <a href="text1.html">секреты<br>юзабилити</a>
+                    <a href="text2.html">улучшить<br>дизайн</a>
+                </div>
+            </li>
+          <li><a href="about.html">о нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <div class="container">
+      <div class="content">
+      <div class="zoomable-block">
+        <i class="fas fa-search zoom-icon" onclick="zoomBlock(this.parentNode)"></i>
+        <div class="article-container">
+          <h1>Секреты юзабилити: как превратить посетителей в фанатов вашего сайта</h1>
+
+          <p>Задумывались ли вы, почему одни сайты притягивают, как магнит, а другие отталкивают, заставляя посетителей бежать? Ответ прост: юзабилити! Это не просто модное слово, а реальный инструмент, способный радикально изменить судьбу вашего онлайн-бизнеса. Представьте, что каждый клик на вашем сайте – это монета, которую либо зарабатываете, либо теряете. И зачастую, причиной этих потерь становится… плохое юзабилити.</p>
+
+          <p>Но что такое юзабилити на самом деле? Это не просто красивая картинка или модный дизайн. Это **способность вашего сайта быть удобным, понятным и эффективным для пользователя**.  Это значит, что посетитель должен легко найти нужную информацию, быстро совершить покупку, без проблем зарегистрироваться или выполнить любое другое целевое действие.</p>
+
+          <h2>Почему юзабилити так важно?</h2>
+
+          <p>Представьте себя на месте посетителя, попавшего на сайт, где:</p>
+          <ul>
+            <li>Навигация запутанная и непонятная.</li>
+            <li>Информация разбросана хаотично.</li>
+            <li>Формы регистрации сложные и требовательные.</li>
+            <li>Кнопки не работают или не видны.</li>
+          </ul>
+          <img src="p1.gif" alt="Пример хорошего и плохого сайта" style="max-width: 100%; height: auto;">
+
+          <p>Что вы сделаете? Скорее всего, закроете вкладку и уйдете к конкурентам, у которых все "проще и удобнее".  И это закономерно! В современном мире, где выбор огромный, люди ценят свое время и не готовы тратить его на "борьбу" с недружелюбным сайтом.</p>
+
+          <p><b>Хорошее юзабилити = Лояльные клиенты + Рост конверсии + Увеличение прибыли</b></p>
+
+          <p>Это не просто слова, это проверенный факт. Инвестируя в юзабилити, вы инвестируете в свой успех.</p>
+
+          <h2>Как же улучшить юзабилити своего сайта и превратить посетителей в фанатов?</h2>
+
+          <p>Вот несколько ключевых моментов, на которые стоит обратить внимание:</p>
+
+          <ul>
+            <li><b>Простота и ясность:</b> Сделайте свой сайт максимально простым и понятным. Избегайте сложных терминов и перегруженности информацией. Используйте простой язык, понятные заголовки и подзаголовки.</li>
+          <img src="p2.png" alt="ф" style="max-width: 100%; height: auto;">
+            <li><b>Интуитивная навигация:</b> Пользователь должен с легкостью находить нужную информацию. Создайте четкую и логичную структуру сайта. Используйте "хлебные крошки", удобное меню и поиск.</li>
+          <img src="p3.gif" alt="ф" style="max-width: 100%; height: auto;">
+            <li><b>Адаптивный дизайн:</b> Ваш сайт должен отлично отображаться на любых устройствах: компьютерах, планшетах, смартфонах. Мобильный трафик растет с каждым днем, и игнорировать его – значит терять потенциальных клиентов.</li>
+            <li><b>Скорость загрузки:</b> Медленная загрузка сайта раздражает пользователей и негативно влияет на поисковую выдачу. Оптимизируйте изображения, используйте кэширование и другие способы ускорения загрузки.</li>
+            <li><b>Читабельность:</b> Убедитесь, что текст на вашем сайте легко читается. Используйте контрастные цвета, подходящий размер шрифта и достаточное межстрочное расстояние.</li>
+          <img src="p4.jpeg" alt="ф" style="max-width: 100%; height: auto;">
+            <li><b>Четкий призыв к действию (CTA):</b> Сориентируйте пользователя, чего вы от него хотите. Используйте четкие и заметные кнопки с призывом к действию (например, "Купить сейчас", "Подписаться", "Узнать больше").</li>
+          <img src="p5.png" alt="ф" style="max-width: 100%; height: auto;">
+            <li><b>Тестирование и анализ:</b> Не бойтесь экспериментировать и анализировать поведение пользователей на вашем сайте. Используйте инструменты веб-аналитики (например, Google Analytics) для отслеживания трафика, поведения пользователей и конверсий. Проводите A/B тестирование для сравнения различных вариантов дизайна и контента.</li>
+          </ul>
+          <img src="p6.png" alt="ф" style="max-width: 100%; height: auto;">
+
+          <h2>Не останавливайтесь на достигнутом!</h2>
+
+          <p>Юзабилити – это не разовая работа, а постоянный процесс. Регулярно анализируйте поведение пользователей на вашем сайте, собирайте обратную связь и вносите необходимые изменения. Следите за трендами в веб-дизайне и технологиях, чтобы ваш сайт всегда оставался современным и удобным для посетителей.</p>
+
+          <p class="conclusion"><b>В заключение:</b></p>
+
+          <p>Помните, что юзабилити – это не просто "хорошо". Это – необходимость для выживания и процветания вашего онлайн-бизнеса. Инвестируйте в юзабилити, и вы увидите, как ваши посетители превращаются в лояльных фанатов, а ваш бизнес – в успешное и прибыльное предприятие. Перестаньте терять "монеты" с каждым кликом и начните строить сайт, который будет приносить вам прибыль и радовать ваших пользователей!</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+ <footer>
+  <div class="container">
+    <div class="footer-left">
+      <p><b>сайт создан при поддержке<br>Люберецкого техникума им.Ю.А.Гагарина</b></p>
+      <p><b>все права защищены<br>©веб-юзабилити</b></p>
+    </div>
+    <div class="footer-center">
+      <p><b>следите за нами в соцсетях</b></p>
+    <div class="social-links">
+    <a href="https://vk.com/loony21" target="_blank" aria-label="Вконтакте"><i class="fab fa-vk"></i></a>
+    <a href="https://t.me/Loony221" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+    <a href="https://github.com/Loony211/Loony211" target="_blank" aria-label="github"><i class="fab fa-github"></i></a>
+    </div>
+    </div>
+    <div class="footer-right">
+      <a href="https://02.rkn.gov.ru/directions/p4172/p18331/"><b>Политика обработки персональных данных</b></a>
+      <a href="https://policies.google.com/terms?hl=ru"><b>Пользовательское соглашение</b></a>
+      <p><b>На информационном ресурсе<br>применяются рекомендательные технологии</b></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Кнопка прокрутки вверх -->
+<div class="scroll-to-top">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+<script>
+function toggleDropdown() {
+  document.querySelector('.dropdown').classList.toggle('show');
+}
+
+// Закрывать выпадающий список при клике вне его
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown-toggle')) {
+    var dropdowns = document.getElementsByClassName("dropdown");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+// Появление стрелки прокрутки
+window.addEventListener('scroll', function() {
+  const scrollToTopButton = document.querySelector('.scroll-to-top');
+  if (window.pageYOffset > 300) {
+    scrollToTopButton.classList.add('show');
+  } else {
+    scrollToTopButton.classList.remove('show');
+  }
+});
+
+// Прокрутка вверх при клике на стрелку
+document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+</script>
+<script>
+    function zoomBlock(block) {
+        block.classList.toggle('zoomed');
+    }
+</script>
+</body>
+</html>

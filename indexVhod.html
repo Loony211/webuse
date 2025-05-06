@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEBuse</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Стили для выпадающего списка статей */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-toggle { /* Стиль для элемента, который вызывает появление списка */
+      color: #4b607f;  /* Цвет текста как у остальных ссылок */
+      font-weight: bold;
+      font-size: 25px;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 0px; /* Add some padding for better click area */
+      display: inline-block; /* Make it a block-level element so it can have padding */
+    }
+
+    .dropdown-content {
+      display: none; /* Скрыто по умолчанию */
+      position: absolute;
+      background-color: #4b607f; /* Цвет фона списка */
+      min-width: 100px; /*  уменьшаем минимальную ширину */
+      /*width: auto; /* Make it fit content - удаляем, чтобы работало min-width */
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 20px; /* Скругленные углы списка */
+      overflow: hidden;      /* Скрываем выходящие элементы за границу */
+      opacity: 0;           /* Начальная прозрачность */
+      transform-origin: top; /* Точка трансформации для анимации */
+      transform: scaleY(0);  /* Начальный масштаб по вертикали (скрыт) */
+      transition: transform 0.3s ease, opacity 0.3s ease; /* Анимация */
+      white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    .dropdown-content a {
+      color: #caa07d; /* Цвет текста в списке */
+      padding: 8px 12px; /* уменьшаем padding */
+      text-decoration: none;
+      display: block;
+      font-size: 16px; /*  уменьшаем размер шрифта */
+    }
+
+    .dropdown-content a:hover {
+      background-color: #30456e; /* Darker color on hover */
+    }
+
+    /* Когда список активен, показываем его */
+    .dropdown.show .dropdown-content {
+      display: block;
+      opacity: 1;
+      transform: scaleY(1);
+    }
+
+    /* Style the toggle when active */
+    .dropdown.show .dropdown-toggle {
+      /* Add any styling you want to apply when the dropdown is open */
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="Логотип">
+    </div>
+    <div class="slogan"><h1>не заставляй меня думать</h1></div>
+    <div class="avatar-nav-wrapper">
+      <a href="registrVh.html" class="login-button">Вход</a>
+      <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" onclick="toggleDropdown()">статьи</a>
+                <div class="dropdown-content">
+                    <a href="text1.html">секреты<br>юзабилити</a>
+                    <a href="text2.html">улучшить<br>дизайн</a>
+                </div>
+            </li>
+          <li><a href="about.html">о нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <div class="container">
+     <div class="zoomable-block">
+      <i class="fas fa-search zoom-icon" onclick="zoomBlock(this.parentNode)"></i>
+      <div class="content">
+        <div class="column-left">
+          <div class="rectangle rectangle-large">
+            <h1>Секреты юзабилити:<br> как превратить посетителей в фанатов вашего сайта</h1>
+
+            <h3><b>Задумывались ли вы, почему одни сайты притягивают, как магнит,а другие отталкивают,заставляя посетителей бежать?</b></h3>
+
+            <h3><b>Ответ прост: юзабилити! Это не просто модное слово, а реальный инструмент, способный радикально изменить судьбу вашего онлайн-бизнеса.
+            Представьте, что каждый клик на вашем сайте – это монета, которую либо зарабатываете, либо теряете. И зачастую, причиной этих потерь становится…</b></h3>
+        <a href="text1.html"><b>читать далее..</b></a>
+          </div>
+
+
+
+          <div class="rectangles-bottom">
+            <div class="rectangle rectangle-small1">
+              <h3></h3>
+              <div class="video-container">
+                <video autoplay loop muted playsinline>
+                  <source src="video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <div class="rectangle rectangle-small2">
+              <h2>Хочешь научиться создавать такие сайты?<br>Стань веб разработчиком!</h2>
+              <h3>Люберецкий техникум ждет именно тебя!</h3>
+        <h4>• научишься работать с базами данных<br>• изучишь несколько языков програмирования<br>• узнаешь о базовой структуре дизайна</h4>
+            </div>
+      <a href="https://luberteh.ru/" class="button rectangle-button">смотреть специальности</a>
+          </div>
+        </div>
+        <div class="column-right">
+          <div class="rectangle rectangle-tall">
+            <h1>три простых способа<br>улучшить дизайн</h1>
+            <div class="image-gallery">
+              <img src="img1.png" alt="Изображение 1">
+              <img src="img2.png" alt="Изображение 2">
+              <a href="text2.html"><img src="img3.png" alt="Изображение 3"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+ <footer>
+  <div class="container">
+    <div class="footer-left">
+      <p><b>сайт создан при поддержке<br>Люберецкого техникума им.Ю.А.Гагарина</b></p>
+      <p><b>все права защищены<br>©веб-юзабилити</b></p>
+    </div>
+    <div class="footer-center">
+      <p><b>следите за нами в соцсетях</b></p>
+    <div class="social-links">
+    <a href="https://vk.com/loony21" target="_blank" aria-label="Вконтакте"><i class="fab fa-vk"></i></a>
+    <a href="https://t.me/Loony221" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+    <a href="https://github.com/Loony211/Loony211" target="_blank" aria-label="github"><i class="fab fa-github"></i></a>
+    </div>
+    </div>
+    <div class="footer-right">
+      <a href="https://02.rkn.gov.ru/directions/p4172/p18331/"><b>Политика обработки персональных данных</b></a>
+      <a href="https://policies.google.com/terms?hl=ru"><b>Пользовательское соглашение</b></a>
+      <p><b>На информационном ресурсе<br>применяются рекомендательные технологии</b></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleDropdown() {
+  document.querySelector('.dropdown').classList.toggle('show');
+}
+
+// Закрывать выпадающий список при клике вне его
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown-toggle')) {
+    var dropdowns = document.getElementsByClassName("dropdown");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<script>
+    function zoomBlock(block) {
+        block.classList.toggle('zoomed');
+    }
+</script>
+</body>
+</html>

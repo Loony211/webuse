@@ -1,0 +1,413 @@
+/* Общие стили (ОСТАВЛЯЕМ) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/*Убрать полосу прокрутки для всей страницы(ОСТАВЛЯЕМ)*/
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.container {
+  max-width: 1500px;  /* ширина расположения элементов в центре */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Стили шапки (ОСТАВЛЯЕМ)*/
+header {
+  background-color: black;
+  padding: 0px 0;
+  color: white;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10;
+  margin: 10;
+  max-width: 100%;
+}
+
+.logo {
+  margin-right: 10px;
+  font-weight: bold;
+  width: 90px;
+  height: 90px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slogan {
+  color: #4b607f;
+  font-size: 40px;
+  font-family: 'Russo One', Arial, sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: 5px;
+  flex-direction: column;
+}
+
+nav li {
+  margin-right: 18px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4b607f;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.login-button {
+  display: inline-block;
+  padding: 6px 30px;
+  background-color: #4b607f;
+  color: #caa07d;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #30456e;
+}
+
+/*ЦЕНТР */
+
+main {
+  padding: 50px 10px;
+  background-color: black;
+  color: #e8d8c9;  /* цвет всего текста в мейне,для текста в блоках отдельно */
+}
+h1 {
+  color: #30456e;  /* заголовки статей*/
+}
+h2 {
+  color: #30456e;  /* заголовки статей*/
+}
+
+.content {
+  display: flex;
+  gap: 30px; /* Отступ между колонками */
+  flex-direction: column; /* Изменено для одной колонки */
+}
+
+
+
+/*!!!  ПОДВАЛ ТУТ !!!(ОСТАВЛЯЕМ)*/
+footer {
+  background-color: #4b607f;
+  color: #e8d8c9;
+  padding: 30px 0;
+  font-size: 14px;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 80%;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right a {
+  display: block;
+  color: #caa07d;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+/* Media query для адаптивности (ОСТАВЛЯЕМ) */
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .footer-right a {
+    display: flex;
+    margin: 0 10px 5px 10px;
+  }
+
+  .content {
+    flex-direction: column; /* В одну колонку на мобильных */
+  }
+
+  .column-left,
+  .column-right {
+    width: 100%; /* Занимают всю ширину */
+  }
+
+  .rectangles-bottom {
+    flex-direction: column; /* Нижние прямоугольники тоже в одну колонку */
+  }
+
+  .rectangle-large,
+  .rectangle-small,
+  .rectangle-tall {
+    width: 100%; /* Занимают всю ширину */
+    height: auto;
+  }
+}
+
+
+/* Стили для иконок соцсетей (добавленные)ОСТАВЛЯЕМ */
+.social-links {
+  display: flex;
+  justify-content: center; /* Центрируем иконки горизонтально */
+  align-items: center; /* Центрируем иконки вертикально */
+  gap: 10px; /* Отступ между иконками */
+}
+
+.social-links a {
+  display: inline-block;
+  width: 30px; /* Размер иконки */
+  height: 30px; /* Размер иконки */
+  text-align: center;
+  line-height: 30px; /* Для вертикального центрирования иконки */
+  color: #fff; /* Цвет иконок */
+  border-radius: 50%; /* Делаем иконки круглыми */
+  text-decoration: none; /* Убираем подчеркивание ссылок */
+  transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+
+.social-links a:hover {
+  background-color: #0077b5; /* Цвет фона при наведении */
+}
+
+.social-links a[aria-label="Вконтакте"] {
+  background-color: #4A76A8; /* Цвет фона для Вконтакте */
+}
+
+.social-links a[aria-label="Telegram"] {
+  background-color: #2AABEE; /* Цвет фона для Telegram */
+}
+
+/* Добавляем стиль для центрирования содержимого ссылки */
+.image-gallery a {
+  display: flex;      /* Используем flexbox для центрирования */
+  justify-content: center; /* Центрируем по горизонтали */
+}
+
+
+/*  Стили для контейнера статьи */
+.article-container {
+  width: 80%; /* Занимает 80% ширины контейнера */
+  margin: 20px auto; /* Центрирование и отступ сверху и снизу */
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #4b607f;
+}
+
+.article-container h1 {
+  font-size: 2.5em;
+  color: #e8d8c9;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.article-container h2 {
+  font-size: 1.8em;
+  color: #e8d8c9;
+  margin-top: 30px;
+}
+
+.article-container h3 {
+  font-size: 1.2em;
+  color: #e8d8c9;
+  margin-top: 15px;
+}
+
+.article-container p {
+  margin-bottom: 15px;
+}
+
+.article-container ul {
+  list-style-type: disc;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.article-container ol {
+  list-style-type: decimal;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.article-container li {
+  margin-bottom: 8px;
+}
+
+.article-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.article-container a:hover {
+  text-decoration: underline;
+}
+
+.article-container .conclusion {
+  font-style: italic;
+  color: #e8d8c9;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Стили для изображений в статье */
+.article-container img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 30px;
+}
+
+    /* Стили для выпадающего списка статей (ОСТАВЛЯЕМ) */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-toggle {
+      color: #4b607f;
+      font-weight: bold;
+      font-size: 25px;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 0px;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #4b607f;
+      min-width: 100px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 20px;
+      overflow: hidden;
+      opacity: 0;
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .dropdown-content a {
+      color: #caa07d;
+      padding: 8px 12px;
+      text-decoration: none;
+      display: block;
+      font-size: 16px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #30456e;
+    }
+
+    .dropdown.show .dropdown-content {
+      display: block;
+      opacity: 1;
+      transform: scaleY(1);
+    }
+
+    .dropdown.show .dropdown-toggle {
+    }
+
+    /* Добавленные стили для стрелки прокрутки вверх */
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4b607f;
+      color: #caa07d;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 1000; /* Важно, чтобы стрелка была поверх всего контента */
+    }
+
+    .scroll-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-to-top i {
+      font-size: 20px;
+    }
+
+/* Стили для лупы */
+.zoomable-block {
+    position: relative; /* Важно для позиционирования иконки */
+}
+
+.zoom-icon {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    font-size: 20px;
+    color: #4b607f;
+    cursor: pointer;
+    z-index: 2; /* Чтобы иконка была поверх контента */
+}
+
+.zoomed {
+    transform: scale(1.13); /* Увеличение на 40% */
+    transition: transform 0.4s ease; /* Плавная анимация */
+    z-index: 1; /* Поднимаем блок выше остальных во время увеличения */
+    position: relative; /*  Необходимо для z-index */
+
+}
+
+.no-transition {
+    transition: none; /* Отключаем анимацию для сброса */
+}

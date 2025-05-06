@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход</title>
+  <link rel="stylesheet" href="reg.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="flying-logo">WEBuse</div>
+  <!-- Кнопка возврата на главную страницу -->
+  <a href="indexVhod.html" class="back-to-home">На главную</a>
+
+  <!-- Сюда вставляем слоган, вне login-container -->
+  <p class="top-slogan">не заставляй меня думать</p>
+
+  <div class="login-container">
+    <h2>Вход в аккаунт</h2>
+    <form>
+      <div class="form-group">
+        <label for="email">Адрес электронной почты</label>
+        <input type="email" id="email" name="email" placeholder="Введите адрес эл. почты">
+      </div>
+      <div class="form-group">
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" placeholder="Введите пароль">
+      </div>
+      <button type="submit" class="login-button">Продолжить</button>
+    </form>
+    <div class="separator">или</div>
+    <div class="google-login">
+      <img src="whod.png" alt="avatar">
+      <span><a href="registr.html">Зарегистрироваться<a></span>
+    </div>
+    <p class="terms">Продолжая, вы принимаете Условия предоставления услуг<br>веб-юзабилити</a> и подтверждаете, что ознакомились с нашей<br> <a href="https://policies.google.com/terms?hl=ru">Политикой конфиденциальности</a>.</p>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const logo = document.getElementById('flying-logo');
+        let x = 0;
+        let y = 0;
+        let dx = 2;
+        let dy = 1;
+        function animateLogo() {
+            x += dx;
+            y += dy;
+            // Обработка столкновений со стенами
+            if (x + logo.offsetWidth > window.innerWidth || x < 0) {
+                dx = -dx;
+            }
+            if (y + logo.offsetHeight > window.innerHeight || y < 0) {
+                dy = -dy;
+            }
+            // Применение новых координат
+            logo.style.left = x + 'px';
+            logo.style.top = y + 'px';
+            // Запрос следующего кадра анимации
+            requestAnimationFrame(animateLogo);
+        }
+        animateLogo(); // Запуск анимации при загрузке страницы
+    });
+  </script>
+
+
+</body>
+</html>

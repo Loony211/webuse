@@ -1,0 +1,374 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/*Убрать полосу прокрутки для всей страницы*/
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.container {
+  max-width: 1500px;  /* ширина расположения элементов в центре */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Стили шапки */
+header {
+  background-color: black;
+  padding: 0px 0;
+  color: white;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10;
+  margin: 10;
+  max-width: 100%;
+}
+
+.logo {
+  margin-right: 10px;
+  font-weight: bold;
+  width: 90px;
+  height: 90px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slogan {
+  color: #4b607f;
+  font-size: 40px;
+  font-family: 'Russo One', Arial, sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: 5px;
+  flex-direction: column;
+}
+
+nav li {
+  margin-right: 18px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4b607f;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.login-button {
+  display: inline-block;
+  padding: 6px 30px;
+  background-color: #4b607f;
+  color: #caa07d;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #30456e;
+}
+
+/*ЦЕНТР*/
+
+main {
+  padding: 50px 10px;
+  background-color: black;
+  color: #4b607f;  /* цвет всего текста в мейне,для текста в блоках отдельно */
+}
+h1 {
+  color: #30456e;  /* заголовки статей*/
+}
+h2 {
+  color: #30456e;  /* заголовки статей*/
+}
+
+.content {
+  display: flex;
+  gap: 30px; /* Отступ между колонками */
+}
+
+.column-left {
+  width: 70%; /* Ширина левой колонки */
+}
+
+.column-right {
+  width: 30%; /* Ширина правой колонки */
+}
+
+.rectangles-bottom {
+  display: flex;
+  gap: 30px; /* Отступ между нижними прямоугольниками */
+  margin-top: 30px;
+}
+
+.rectangle {
+  background-color: #e8d8c9; /* прямоугольники цвет*/
+  color: #4b607f;  /* цвет текста*/
+  padding: 20px;
+  border-radius: 30px; /* Скругление углов */
+  box-sizing: border-box; /* Чтобы padding не влиял на общую ширину */
+}
+
+.rectangle-large {
+  width: 100%;
+  height: 450px;   /* высота левого большого прямоугольника*/
+}
+
+.rectangle-small1 {
+  width: 30%; /* Ширина каждого из нижних прямоугольников */
+  height: 350px;
+}
+
+.rectangle-small2 {
+  width: 70%; /* Ширина каждого из нижних прямоугольников */
+  height: 350px;
+}
+.rectangle-button {
+  display: inline-block;  /* или block, в зависимости от желаемого поведения */
+  padding: 10px 20px;
+  background-color: #4b607f; /* цвет кнопки */
+  color: #caa07d;
+  text-decoration: none;
+  border-radius: 20px;
+  position: absolute; /*  Абсолютное позиционирование */
+  bottom: 35px;        /*  Привязка к нижнему краю контейнера */
+  right: 10px;         /*  Привязка к правому краю контейнера */
+  font-size: 18px;
+}
+.rectangle-button-right {
+  display: inline-block;  /* или block, в зависимости от желаемого поведения */
+  padding: 10px 20px;
+  background-color: #4b607f; /* цвет кнопки */
+  color: #caa07d;
+  text-decoration: none;
+  border-radius: 20px;
+  position: absolute; /*  Абсолютное позиционирование */
+  bottom: 10px;        /*  Привязка к нижнему краю контейнера */
+  right: 10px;         /*  Привязка к правому краю контейнера */
+  font-size: 18px;
+}
+
+
+/* чтобы position: absolute работал, нужно сделать position: relative у родительского элемента */
+.rectangles-bottom {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  position: relative; /*  Относительное позиционирование для контейнера */
+}
+
+
+
+.rectangle-tall {
+  width: 100%;
+  height: 850px; /* Высота как у большого прямоугольника слева + высота двух малых */
+  position: relative; /*  Относительное позиционирование для содержимого */
+}
+
+.image-gallery {
+  display: flex;
+  flex-direction: column; /* Картинки будут в столбец */
+  align-items: center; /* Центрируем картинки по горизонтали */
+  margin-bottom: 20px;  /* Отступ перед кнопкой */
+}
+
+.image-gallery img {
+  width: 80%; /* Занимает 80% ширины родителя */
+  margin-bottom: 10px; /* Отступ между картинками */
+  border-radius: 35px;  /* Скругление углов картинок */
+  object-fit: cover; /*  Если нужно, чтобы изображения не искажались при изменении размера */
+}
+
+/*!!!  ПОДВАЛ ТУТ !!!*/
+footer {
+  background-color: #4b607f;
+  color: #e8d8c9;
+  padding: 30px 0;
+  font-size: 14px;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 80%;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right a {
+  display: block;
+  color: #caa07d;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+/* Media query для адаптивности */
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .footer-right a {
+    display: flex;
+    margin: 0 10px 5px 10px;
+  }
+
+  .content {
+    flex-direction: column; /* В одну колонку на мобильных */
+  }
+
+  .column-left,
+  .column-right {
+    width: 100%; /* Занимают всю ширину */
+  }
+
+  .rectangles-bottom {
+    flex-direction: column; /* Нижние прямоугольники тоже в одну колонку */
+  }
+
+  .rectangle-large,
+  .rectangle-small,
+  .rectangle-tall {
+    width: 100%; /* Занимают всю ширину */
+    height: auto;
+  }
+}
+
+
+/* Стили для иконок соцсетей (добавленные) */
+.social-links {
+  display: flex;
+  justify-content: center; /* Центрируем иконки горизонтально */
+  align-items: center; /* Центрируем иконки вертикально */
+  gap: 10px; /* Отступ между иконками */
+}
+
+.social-links a {
+  display: inline-block;
+  width: 30px; /* Размер иконки */
+  height: 30px; /* Размер иконки */
+  text-align: center;
+  line-height: 30px; /* Для вертикального центрирования иконки */
+  color: #fff; /* Цвет иконок */
+  border-radius: 50%; /* Делаем иконки круглыми */
+  text-decoration: none; /* Убираем подчеркивание ссылок */
+  transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+
+.social-links a:hover {
+  background-color: #0077b5; /* Цвет фона при наведении */
+}
+
+.social-links a[aria-label="Вконтакте"] {
+  background-color: #4A76A8; /* Цвет фона для Вконтакте */
+}
+
+.social-links a[aria-label="Telegram"] {
+  background-color: #2AABEE; /* Цвет фона для Telegram */
+}
+
+/* Добавляем стиль для центрирования содержимого ссылки */
+.image-gallery a {
+  display: flex;      /* Используем flexbox для центрирования */
+  justify-content: center; /* Центрируем по горизонтали */
+}
+
+.rectangle-small1 {
+  position: relative; /* Важно для позиционирования video-container */
+  overflow: hidden; /* Скрывает все, что выходит за границы блока */
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Скрывает выступающие части видео, если оно не идеально подходит по размеру */
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Масштабирует видео для заполнения контейнера, обрезая при необходимости */
+}
+
+.rectangle-small1 h3{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    z-index: 10;
+}
+
+
+
+/* Стили для лупы */
+.zoomable-block {
+    position: relative; /* Важно для позиционирования иконки */
+}
+
+.zoom-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #4b607f;
+    cursor: pointer;
+    z-index: 2; /* Чтобы иконка была поверх контента */
+}
+
+.zoomed {
+    transform: scale(1.25); /* Увеличение на 40% */
+    transition: transform 0.4s ease; /* Плавная анимация */
+    z-index: 1; /* Поднимаем блок выше остальных во время увеличения */
+    position: relative; /*  Необходимо для z-index */
+
+}
+
+.no-transition {
+    transition: none; /* Отключаем анимацию для сброса */
+}
